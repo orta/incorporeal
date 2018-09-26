@@ -3,13 +3,14 @@
     "tslint:recommended"
   ],
   "rules": {
+    "variable-name": false,
     "arrow-parens": false,
     "interface-name": [
       true,
       "never-prefix"
     ],
     "max-classes-per-file": [
-      false, 1
+      false
     ],
     "member-access": [
       false,
@@ -22,6 +23,8 @@
     "semicolon": [
       true,
       "never",
+      "ignore-interfaces",
+      "ignore-bound-class-methods"
     ],
     "switch-default": false,
     "trailing-comma": [

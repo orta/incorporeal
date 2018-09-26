@@ -1,0 +1,61 @@
+{
+  "name": "incorporeal",
+  "version": "0.0.1",
+  "description": "",
+  "main": "build/index.js",
+  "author": "Orta Therox <orta.therox@gmail.com> & Art.sy Inc",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^19.2.3",
+    "@types/node": "^10.7.1",
+    "danger": "^0.18.0",
+    "husky": "^0.13.3",
+    "jest": "^20.0.0",
+    "lint-staged": "^3.2.5",
+    "prettier": "^1.9.2",
+    "release-it": "^7.5.0",
+    "ts-jest": "^20.0.0",
+    "ts-node": "^3.0.0",
+    "tslint": "^5.2.0",
+    "typescript": "^2.3.2"
+  },
+  "scripts": {
+    "type-check": "tsc --noEmit",
+    "build": "tsc",
+    "lint": "tslint 'src/**/*.{ts,tsx}'",
+    "precommit": "lint-staged",
+    "prepush": "npm run build",
+    "release": "release-it"
+  },
+  "lint-staged": {
+    "*.@(ts|tsx)": [
+      "tslint --fix",
+      "yarn prettier --write",
+      "git add"
+    ]
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(.test)\\.(ts|tsx)$",
+    "testPathIgnorePatterns": [
+      "\\.snap$",
+      "<rootDir>/node_modules/"
+    ],
+    "cacheDirectory": ".jest/cache"
+  },
+  "prettier": {
+    "printWidth": 115,
+    "semi": false,
+    "singleQuote": false,
+    "trailingComma": "es5",
+    "bracketSpacing": true,
+    "proseWrap": "always"
+  }
+}

@@ -34,3 +34,4 @@ jspm_packages
 
 # TS build files
 build
+.env

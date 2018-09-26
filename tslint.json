@@ -9,7 +9,7 @@
       "never-prefix"
     ],
     "max-classes-per-file": [
-      false
+      false, 1
     ],
     "member-access": [
       false,
@@ -22,8 +22,6 @@
     "semicolon": [
       true,
       "never",
-      "ignore-interfaces",
-      "ignore-bound-class-methods"
     ],
     "switch-default": false,
     "trailing-comma": [

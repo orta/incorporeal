@@ -1,6 +1,6 @@
 incorporeal
 
-[Your README here]
+What does a meta-metaphysics look like?
 
 ## How do I work on this?
 
@@ -9,7 +9,14 @@ git clone https://github.com/orta/incorporeal.git
 cd incorporeal
 yarn install
 
-# Open VS Code with `code .`
+# Set up your .env
+cp .env.example .env
+
+# Open VS Code
+code .
+
+# Run the server
+yarn start
 
 # Run tests
 yarn jest

@@ -24,8 +24,6 @@
     "type-check": "tsc --noEmit",
     "build": "tsc",
     "lint": "tslint 'src/**/*.{ts,tsx}'",
-    "precommit": "lint-staged",
-    "prepush": "npm run build",
     "start": "node  -r dotenv/config ./node_modules/.bin/babel-node  --extensions '.ts,.js' --inspect src/index.ts"
   },
   "lint-staged": {
@@ -64,5 +62,11 @@
     "ip": "^1.1.5",
     "url-join": "^4.0.0",
     "uuid": "^3.3.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm run build"
+    }
   }
 }

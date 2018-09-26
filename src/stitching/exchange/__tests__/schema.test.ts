@@ -3,7 +3,7 @@ import {
   getMutationFieldsFromSchema,
   getRootFieldsFromSchema,
   getTypesFromSchema,
-} from "lib/stitching/lib/getTypesFromSchema"
+} from "../../lib/getTypesFromSchema"
 import { executableExchangeSchema } from "../schema"
 
 it("Does not include generic type names", async () => {

@@ -3,7 +3,7 @@ import {
   getMutationFieldsFromSchema,
   getRootFieldsFromSchema,
   getTypesFromSchema,
-} from "lib/stitching/lib/getTypesFromSchema"
+} from "../../lib/getTypesFromSchema"
 import { executableGravitySchema } from "../schema"
 
 it("Does not include gravity core types", async () => {

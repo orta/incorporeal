@@ -1,4 +1,4 @@
-import { getTypesFromSchema } from "lib/stitching/lib/getTypesFromSchema"
+import { getTypesFromSchema } from "../../lib/getTypesFromSchema"
 import { executableLewittSchema } from "../schema"
 
 it("Does not include generic type names", async () => {

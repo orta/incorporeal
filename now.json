@@ -1,0 +1,13 @@
+{
+  "name": "incorporeal",
+  "alias": ["incorporeal-api"],
+  "type": "npm",
+  "public": true,
+  "env": {
+    "GRAVITY_GRAPHQL_ENDPOINT": "https://stagingapi.artsy.net/api",
+    "DELTA_API_BASE": "https://delta.artsy.net",
+    "IMPULSE_API_BASE": "https://impulse-staging.artsy.net/api",
+    "EXCHANGE_API_BASE": "https://exchange-staging.artsy.net/api",
+    "METAPHYSICS_API_BASE": "https://metaphysics-staging.artsy.net/"
+  }
+}

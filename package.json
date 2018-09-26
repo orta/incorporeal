@@ -22,9 +22,10 @@
   },
   "scripts": {
     "type-check": "tsc --noEmit",
-    "build": "tsc",
+    "build": "babel src --copy-files --extensions '.ts,.js' --ignore src/test,src/integration,src/**/__tests__ -s inline -d build/src",
     "lint": "tslint 'src/**/*.{ts,tsx}'",
-    "start": "node  -r dotenv/config ./node_modules/.bin/babel-node  --extensions '.ts,.js' --inspect src/index.ts"
+    "start": "node build/src/index.js",
+    "dev": "node  -r dotenv/config ./node_modules/.bin/babel-node  --extensions '.ts,.js' --inspect src/index.ts"
   },
   "lint-staged": {
     "*.@(ts|tsx)": [
@@ -45,6 +46,7 @@
     "proseWrap": "always"
   },
   "dependencies": {
+    "@babel/cli": "^7.1.0",
     "@babel/core": "^7.1.0",
     "@babel/node": "^7.0.0",
     "@babel/preset-env": "^7.1.0",

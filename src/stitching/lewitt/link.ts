@@ -16,7 +16,7 @@ export const createLewittLink = () => {
   })
 
   const authMiddleware = setContext((_request, context) => {
-    const locals = context.graphqlContext && context.graphqlContext.res.locals
+    const locals = context.graphqlContext && context.graphqlContext.res && context.graphqlContext.res.locals
     const headers = { ...(locals && requestIDHeaders(locals.requestIDs)) }
     // Lewitt uses no authentication for now
     return { headers }

@@ -16,7 +16,7 @@ export const createGravityLink = () => {
   })
 
   const authMiddleware = setContext((_request, context) => {
-    const locals = context.graphqlContext && context.graphqlContext.res.locals
+    const locals = context.graphqlContext && context.graphqlContext.res && context.graphqlContext.res.locals
     const headers = { ...(locals && requestIDHeaders(locals.requestIDs)) }
     // Object.assign(headers, { "X-XAPP-TOKEN": config.GRAVITY_XAPP_TOKEN })
     if (locals.accessToken) {

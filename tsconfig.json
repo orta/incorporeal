@@ -2,8 +2,8 @@
     "compilerOptions": {
         "target": "es6",
         "module": "commonjs",
-        "rootDir": "./src",
-        "baseUrl": "./src",
+        "rootDir": "src",
+        "baseUrl": "src",
         "outDir": "build",
         "allowJs": false,
         "pretty": true,

@@ -12,11 +12,11 @@ const { METAPHYSICS_API_BASE } = process.env
 export const createMetaphysicsLink = () => {
   const httpLink = createHttpLink({
     fetch,
-    uri: urljoin(METAPHYSICS_API_BASE, "graphql"),
+    uri: urljoin(METAPHYSICS_API_BASE),
   })
 
   const authMiddleware = setContext((_request, context) => {
-    const locals = context.graphqlContext && context.graphqlContext.res.locals
+    const locals = context.graphqlContext && context.graphqlContext.res && context.graphqlContext.res.locals
     const headers = { ...(locals && requestIDHeaders(locals.requestIDs)) }
     return { headers }
   })

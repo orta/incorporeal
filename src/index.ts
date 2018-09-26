@@ -16,7 +16,11 @@ import { executableMetaphysicsSchema } from "./stitching/metaphysics/schema"
 const gravitySchema = executableGravitySchema()
 // const lewittSchema = await executableLewittSchema()
 const exchangeSchema = executableExchangeSchema()
+
 const metaphysicsSchema = executableMetaphysicsSchema()
+const anyMetaphysicsSchema = metaphysicsSchema as any
+anyMetaphysicsSchema.__allowedLegacyNames = ["__id"]
+
 // The order should only matter in that extension schemas come after the
 // objects that they are expected to build upon
 const mergedSchema = mergeSchemas({

@@ -16,7 +16,7 @@ cp .env.example .env
 code .
 
 # Run the server
-yarn start
+yarn dev
 
 # Run tests
 yarn jest

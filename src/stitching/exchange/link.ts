@@ -16,7 +16,7 @@ export const createExchangeLink = () => {
   })
 
   const authMiddleware = setContext((_request, context) => {
-    const locals = context.graphqlContext && context.graphqlContext.res.locals
+    const locals = context.graphqlContext && context.graphqlContext.res && context.graphqlContext.res.locals
     const tokenLoader = locals && locals.dataLoaders.exchangeTokenLoader
     const headers = { ...(locals && requestIDHeaders(locals.requestIDs)) }
     // If a token loader exists for Exchange (i.e. this is an authenticated request), use that token to make
